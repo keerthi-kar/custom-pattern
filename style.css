@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #38598b, #2980b9, #24527a, #79c2d0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #38598b;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.container {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    background: #66bfbf, #24527a, #79c2d0;
+
+    .container {
+        animation: fadeSlideIn 1s ease-out;
+    }
+
+}
+
+label {
+    font-size: 22px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #c81912;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #e79e85;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.outputbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 0 10px;
+    width: 100%;
+}
+
+#output {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: monospace;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 20px 20px 20px 50px;
+    line-height: 1.2;
+    white-space: pre;
+    word-break: break-word;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    max-height: 300px;
+    margin: 50px auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
+    box-sizing: border-box;
+    direction: ltr;
+    scroll-behavior: smooth;
+    animation: fadeInSlide 0.5s ease-in-out;
+
+}
+
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+}
+
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #output {
+        font-size: 12px;
+        padding: 15px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 90%;
+        min-width: unset;
+        box-sizing: border-box;
+        overflow-x: auto;
+    }
+
+    .outputbox {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        overflow-x: auto;
+    }
+}

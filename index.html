@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pattern Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Custom Pattern Generator</h1>
+    </header>
+    <from autocomplete="off" class="container">
+        <label for="pattern">Type a Word : </label>
+        <input type="text" id="pattern" placeholder="E.g., HelloWorld" autocoplelete="off">
+        <button onclick="get()">Create Pattern</button>
+        <div class="outputbox">
+            <pre id="output">Please enter a word and click 'Show pattern'</pre>
+        </div>
+        <button onclick="download()">Download</button>
+    </from>
+    <footer>
+        Designed with ❤️ by Keerthi @2025
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
